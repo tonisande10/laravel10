@@ -9,12 +9,35 @@
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
+          <!-- login -->
+          <div>
+            <x-input-label for="login" :value="__('Login')" />
+            <x-text-input id="login" class="block mt-1 w-full" type="text" name="login" :value="old('login')" required autofocus />
+            <x-input-error :messages="$errors->get('login')" class="mt-2" />
+        </div>
+
+          <!-- posto -->
+          <div>
+            <x-input-label for="posto" :value="__('Posto')" />
+            <x-text-input id="posto" class="block mt-1 w-full" type="text" name="posto" :value="old('posto')" required autofocus />
+            <x-input-error :messages="$errors->get('posto')" class="mt-2" />
+        </div>
+
+           <!-- telefone -->
+           <div>
+            <x-input-label for="telefone" :value="__('Telefone')" />
+            <x-text-input id="telefone" class="block mt-1 w-full" type="text" name="telefone" :value="old('telefone')" required autofocus />
+            <x-input-error :messages="$errors->get('telefone')" class="mt-2" />
+        </div>
+        
         <!-- Email Address -->
         <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
+
+        
 
         <!-- Password -->
         <div class="mt-4">
