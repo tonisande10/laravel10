@@ -18,22 +18,50 @@
 </head>
 <body>
     
+var $posto-> {{ Auth::user()->login }};
+echo $posto;
     vai testar a paciencia
     <div>{{ Auth::user()->login }}</div>
    {{$hoje = date ('d/m/Y')}}
    <form>
-  <div class="form-row">
-    <div class="col-md-4 mb-3">
-      <label for="validationServer01">Primeiro nome</label>
-      </div>
-      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Nome" value="Mark" required>
-      <label for="validationServer01">Primeiro nome</label>
-      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Nome" value="Mark" required>
-      </div>
+    <div class="form-row">
+    <div class="col-md-2">
+        <label for="nome">RG</label>
+        <input type="text" class="form-control" id="rg" placeholder="" value="" required>
+        </div>
+        <div class="col-md-2">
+        <label for="posto">posto</label>
+        <input type="text" class="form-control" id="posto" placeholder="" value="<?php $posto ?>" required>
+        </div>
+
+    <div class="col-md-4">
+        <label for="nome">Nome do requerente</label>
+        <input type="text" class="form-control" id="nome" placeholder="" value="" required>
+        </div>
+    <div class="col-md-4">
+        <label for="pai">Nome do pai</label>
+        <input type="text" class="form-control" id="pai" placeholder="" value="" required>
+        </div>
+    <div class="col-md-4">
+        <label for="mãe">Nome da mãe</label>
+        <input type="text" class="form-control" id="mae" placeholder="" value="" required>
+        </div>
+        <div class="form-row">
+    <div class="col-md-4">
+        <label for="nome">Nome do requerente</label>
+        <input type="text" class="form-control" id="nome" placeholder="" value="" required>
+        </div>
+    <div class="col-md-4">
+        <label for="pai">Nome do pai</label>
+        <input type="text" class="form-control" id="pai" placeholder="" value="" required>
+        </div>
+    <div class="col-md-4">
+        <label for="mãe">Nome da mãe</label>
+        <input type="text" class="form-control" id="mae" placeholder="" value="" required>
+        </div>
     </div>
-   
-     
     </div>   
+    
   
 </body>
 </html>
