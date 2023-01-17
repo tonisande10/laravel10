@@ -1,29 +1,20 @@
+@extends('layouts.sande')
+
+@section('content')
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Última versão CSS compilada e minificada -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Tema opcional -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<form method="GET" action="{{ route('post.push') }}">
+@csrf
 
-<!-- Última versão JavaScript compilada e minificada -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<link href="{{ asset('css/sande.css') }}" rel="stylesheet"> 
-<link href="{{ asset('css/print.css') }}" media="print" rel="stylesheet"> 
-</head>
-
- 
-   <form>
     <h2 class="no-print">MASCÁRA INFORMATIZADA</h2>
     <div class="1linha">
+  <!-- 
     <div class="col-md-2">
+   
+
+     
+   
         <label class="no-print"  for="posto">RG</label>
         <input type="text" class="form-control print" id="rg" placeholder="" value="" >
         </div>
@@ -47,14 +38,14 @@
         <input type="text" class="form-control no-print" id="usuarionome" placeholder="" value="{{ Auth::user()->name }}" >
         </div>
         </div>
-</br></br></br>
-
+ -->
 
 <div class="2linha">
     <div class="col-md-4">
         <label for="nomereq">Nome do requerente</label>
-        <input type="text" class="form-control print" id="nomereq" placeholder="" value="" >
+        <input type="text" class="form-control print" name="nomereq" id="nomereq" placeholder="" value="">
         </div>
+       
     <div class="col-md-4">
         <label for="pai">Nome do pai</label>
         <input type="text" class="form-control print" id="pai" placeholder="" value="" >
@@ -66,7 +57,7 @@
     </div></br></br></br>
 
 
-    <div class="3linha">
+    <!-- <div class="3linha">
     <div class="col-md-2">
         <label for="dtnasci">Data de nascimento</label>
               <input type="text" class="form-control print" id="dtnasci" placeholder="" value="" >
@@ -243,12 +234,14 @@
         <label for="anomalias">Anomalias.</label>
         <input type="text" class="form-control print" id="anomalias" placeholder="" value="" >
         </div>
-        
+       
         </div>
-
+        -->
+        <button type="submit">zorra</button>
     
-    <input type="button" value="Print this page" onClick="window.print()"/>
+  
 </form>
-</body> 
 
-</html>
+
+
+@endsection

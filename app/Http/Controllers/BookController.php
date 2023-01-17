@@ -16,6 +16,18 @@ class BookController extends Controller
         return view('dashboard');
     }
 
+    public function sande()
+    {
+
+        
+       $datah=date('d/m/Y');
+        return view('sande', ['datah'=> $datah]);
+
+
+    }
+
+
+
     /**
      * Show the form for creating a new resource.
      *

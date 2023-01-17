@@ -18,12 +18,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/sande', function () {
-    return view('sande');
-})->middleware(['auth', 'verified'])->name('sande');
+Route::get('/edit1', function () {
+    return view('cadastrorg/edit1');
+});
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
+
+Route::get('/cadastrorg', 'App\Http\Controllers\CadastrorgController@sande')->middleware(['auth', 'verified'])->name('cadastrorg');
+Route::get('/posts', 'App\Http\Controllers\CadastrorgController@index')->middleware(['auth', 'verified'])->name('post.create');
+Route::post('/posts', 'App\Http\Controllers\CadastrorgController@store')->middleware(['auth', 'verified'])->name('post.store');
+
+Route::get('/edit', 'App\Http\Controllers\CadastrorgController@push')->middleware(['auth', 'verified'])->name('post.push');
+
+Route::post('/update', 'App\Http\Controllers\CadastrorgController@update')->middleware(['auth', 'verified'])->name('post.update');
+Route::get('/update1/{id}', 'App\Http\Controllers\CadastrorgController@update1')->middleware(['auth', 'verified'])->name('post.update1');
+Route::get('/pesquisar', 'App\Http\Controllers\CadastrorgController@pesquisar')->middleware(['auth', 'verified'])->name('post.pesquisa');
+Route::post('/update2/{id}', 'App\Http\Controllers\CadastrorgController@update2')->middleware(['auth', 'verified'])->name('post.update2');
+Route::get('/dashboard', function () {return view('dashboard');
+    Route::get('/visual', 'App\Http\Controllers\CadastrorgController@visual')->middleware(['auth', 'verified'])->name('post.visualisar');    
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

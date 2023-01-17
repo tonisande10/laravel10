@@ -1,0 +1,35 @@
+@media print {
+
+ select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url(../images/select-angle-down.png) no-repeat center right #FFF;
+  border: 1px solid #333;
+  font-size: 15px;
+  padding-right: 20px;
+}
+  
+  label{
+    display: none;
+  }
+  body {
+    background-color: #1d61e7;
+    border: 0;
+  }
+  .print {
+    display: block;
+    background-color: #1d61e7;
+    border: none;
+    
+  }
+  .no-print {
+    display: none;
+    border: none;
+  }
+
+  #nomereq{
+
+    background-color: red;
+  }
+}
