@@ -77,10 +77,21 @@ class CadastrorgController extends Controller
         'cordocabelo' => $request->cordocabelo,
         'barba' => $request->barba,
         'bigode' => $request->bigode,
-        'corolho' => $request->corolho,
-        'tipodolho' => $request->tipolho,
+        'corolho' => $request->cordoolho,
+        'tipodolho' => $request->tipodoolho,
         'obs' => $request->obs,
         'anomalias' => $request->anomalias,
+        'endereco' => $request->endereco,
+'numeroendereco' => $request->numeroendereco,
+'complementoendereco' => $request->complementoendereco,
+'bairro' => $request->anomalias,
+'cidaderes' => $request->bairro,
+'estadores' => $request->estadores,
+'distrito' => $request->distrito,
+'estadocivil' => $request->estadocivil,
+'altura' => $request->altura,
+'cep' => $request->cep, 
+'telefone' => $request->telefone
 
     ]);
 

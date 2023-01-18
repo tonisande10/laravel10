@@ -20,10 +20,8 @@
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.1",
         "phpunit/phpunit": "^9.5.10",
-        "spatie/laravel-ignition": "^1.0",
-        "axios": "^0.19",
-        "croos-env": "^5.1",
-        "laravel-mix": "^4.0.7"
+        "spatie/laravel-ignition": "^1.0"
+        
     },
     "autoload": {
         "psr-4": {

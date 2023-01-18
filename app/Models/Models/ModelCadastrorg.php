@@ -41,7 +41,20 @@ class ModelCadastrorg extends Model
 'corolho',
 'tipodolho',
 'obs',
-'anomalias' ];
+'anomalias',
+'endereco',
+'numeroendereco',
+'complementoendereco',
+'bairro',
+'cidaderes',
+'estadores',
+'distrito',
+'estadocivil',
+'altura',
+'cep', 
+'telefone'
+
+];
 
 
 

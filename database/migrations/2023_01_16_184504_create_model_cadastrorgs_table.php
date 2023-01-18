@@ -46,7 +46,19 @@ return new class extends Migration
             $table->string('corolho',20)->nullable()->default(NULL); 
             $table->string('tipodolho',20)->nullable()->default(NULL); 
             $table->string('obs',20)->nullable()->default(NULL);
-            $table->string('anomalias',20)->nullable()->default(NULL); 
+            $table->string('anomalias',20)->nullable()->default(NULL);
+            $table->string('endereco',40)->nullable()->default(NULL);
+            $table->string('complementoendereco',20)->nullable()->default(NULL);
+            $table->string('numeroendereco',20)->nullable()->default(NULL);
+            $table->string('bairro',20)->nullable()->default(NULL);
+            $table->string('cidaderes',25)->nullable()->default(NULL);
+            $table->string('estadores',25)->nullable()->default(NULL);
+            $table->string('distrito',25)->nullable()->default(NULL);
+            $table->string('estadocivil',10)->nullable()->default(NULL);
+            $table->string('altura',4)->nullable()->default(NULL);
+            $table->string('cep',10)->nullable()->default(NULL);
+            $table->string('telefone',14)->nullable()->default(NULL);
+
             $table->timestamps();
         });
     }

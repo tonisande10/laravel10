@@ -8,28 +8,29 @@
 @csrf
 
     <h2 class="no-print">MASCÁRA INFORMATIZADA TESTE</h2>
-    <div class="1linha">
-    <div class="col-md-2">
+    <div class="form-row 1linha">
+    <div class="form-group col-md-2 ">
         
         <label class="no-print"  for="posto">RG</label>
         <input type="text" class="form-control print" id="rg" name="rg" placeholder=""  >
         </div>
-    <div class="col-md-2">
+
+    <div class="form-group col-md-2">
         <label class="no-print" for="datai">Data</label>
-        <input type="text" class="form-control print" id="datai" name="datai" placeholder="" value="{{$datah}}">
+        <input type="text" class="form-control no-print" id="datai" name="datai" placeholder="" value="{{$datah}}">
         </div>
-        <div class="col-md-2">
+        <div class="form-group col-md-2">
         <label for="posto">posto</label>
         <input type="text" class="form-control print" id="posto" name="posto" placeholder="" value="{{ Auth::user()->posto }}" >
         </div>
 
-        <div class="col-md-2">
+        <div class="form-group col-md-2">
         <label for="usuariologin">usuario/login</label>
-        <input type="text" class="form-control print" id="usuariologin" name="usuariologin" placeholder="" value="{{ Auth::user()->login }}" >
+        <input type="text" class="form-control no-print" id="usuariologin" name="usuariologin" placeholder="" value="{{ Auth::user()->login }}" >
         </div>
 
         
-        <div class="col-md-4">
+        <div class="form-group col-md-4">
         <label for="usuarionome">usuario/nome</label>
         <input type="text" class="form-control no-print" id="usuarionome" name="usuarionome" placeholder="" value="{{ Auth::user()->name }}" >
         </div>
@@ -92,6 +93,7 @@
     </div>
     </div>  
     </br></br></br> 
+
     <div class="4linha">
     <div class="col-md-2">
         <label for="estadonatu">Estado nascimento</label>
@@ -111,18 +113,31 @@
         <input type="text" class="form-control print" id="cpf" name="cpf" placeholder="" value="" >
         </div>
     </div>
-    <div class="4linha">
+
+    <div class="5linha">
     <div class="col-md-2">
-        <label for="tipocert">Tipo de Certidão</label>
+    <label for="estadocivil">estadocivil</label>
+            <select class="form-control print" id="estadocivil" name="estadocivil" value="" >
+              <option value="SOLTEIRO">SOLTEIRO</option>
+              <option value="CASADO">CASADO</option>
+              <option value="DIVORCIADO">DIVORCIADO</option>
+             </select>
+    </div>
+             <div class="col-md-2">
+    <label for="tipocert">Certidão</label>
             <select class="form-control print" id="tipocert" name="tipocert" value="" >
               <option value="NASCIMENTO">NASCIMENTO</option>
               <option value="CASAMENTO">CASAMENTO</option>
-    
-            </select>
+             </select>
             </div>
             <div class="col-md-3">
         <label for="comarca">Comarca</label>
         <input type="text" class="form-control print" id="comarca" name="comarca" placeholder="" value="" >
+        </div>
+
+        <div class="col-md-2">
+        <label for="comarca">Distrito</label>
+        <input type="text" class="form-control print" id="distrito" name="distrito" placeholder="" value="" >
         </div>
 
         <div class="col-md-1">
@@ -140,7 +155,14 @@
         <input type="text" class="form-control print" id="termo" name="termo"placeholder="" value="" >
         </div>
 
-        <div class="col-md-2">
+       
+    </div>
+
+
+    <div class="6linha">
+    <div class="col-md-2">
+
+    
         <label for="dtreg">Data do Reg.</label>
         <input type="text" class="form-control print" id="dtreg" name="dtreg" placeholder="" value="" >
         </div>
@@ -149,11 +171,58 @@
         <label for="dtcert">Data da Cert.</label>
         <input type="text" class="form-control print" id="dtcert" name="dtcert" placeholder="" value="" >
         </div>
-    </div>
 
+        <div class="col-md-2">
+        <label for="cep">CEP</label>
+        <input type="text" class="form-control print" id="cep" name="cep" placeholder="" value="" >
+        </div>
 
-    <div class="5linha">
-    <div class="col-md-2">
+        <div class="col-md-2">
+        <label for="telefone">Telefone</label>
+        <input type="text" class="form-control print" id="telefone" name="telefone" placeholder="" value="" >
+        </div>
+
+        <div class="col-md-2">
+        <label for="cidaderes">Cidade reside</label>
+        <input type="text" class="form-control print" id="cidaderes" name="cidaderes" placeholder="" value="" >
+        </div>
+
+        <div class="col-md-2">
+        <label for="estadores">Estado reside</label>
+        <input type="text" class="form-control print" id="estadores" name="estadores" placeholder="" value="" >
+        </div>
+        </div>
+        <div class="7linha">
+        <div class="col-md-4">
+        <label for="endereco">Endereço</label>
+        <input type="text" class="form-control print" id="endereco" name="endereco" placeholder="" value="" >
+        </div>
+
+        <div class="col-md-2">
+        <label for="numeroendereco">Nº</label>
+        <input type="text" class="form-control print" id="numeroendereco" name="numeroendereco" placeholder="" value="" >
+        </div>
+
+        <div class="col-md-4">
+        <label for="complementoendereco">Complemento</label>
+        <input type="text" class="form-control print" id="complementoendereco" name="complementoendereco" placeholder="" value="" >
+        </div>
+
+        <div class="col-md-2">
+        <label for="bairro">Bairro</label>
+        <input type="text" class="form-control print" id="bairro" name="bairro" placeholder="" value="" >
+        </div>
+
+        </div>
+        
+        
+        <div class="8linha">
+        <div class="col-md-1">
+        <label for="altura">Altura</label>
+        <input type="text" class="form-control print" id="altura" name="altura" placeholder="" value="" >
+        </div>
+        
+        <div class="col-md-1">
         <label for="cutis">Cutis</label>
             <select class="form-control print" id="cutis" name="cutis" value="" >
               <option value="PRETA">PRETA</option>
@@ -161,6 +230,7 @@
               <option value="AMARELA">BRANCA</option>
            </select>
             </div>
+
             <div class="col-md-2">
 
         <label for="cordocabelo">Cor do Cabelo</label>
