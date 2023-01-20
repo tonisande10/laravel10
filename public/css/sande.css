@@ -1,1 +1,36 @@
-body {background-color: rgb(229, 234, 234);}
+body {background-color: rgb(229, 234, 234);
+
+
+    margin-top: 15px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    margin-left: 35px;
+
+}
+
+
+#titulo {
+
+    text-align: center;
+
+}
+
+/* #container-imagem {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: red;
+
+    background:  url("../img/documentoja.jpg");
+    background-size: cover;
+} */
+
+.cat {
+    width: 1200px;
+    height: 1200px;
+    overflow: hidden;
+   }
+   #imginicial {
+    
+    width: 100%; 
+   }

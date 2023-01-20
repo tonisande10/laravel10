@@ -7,7 +7,7 @@
 <form method="POST" action="{{ route('post.store') }}">
 @csrf
 
-    <h2 class="no-print">MASCÁRA INFORMATIZADA TESTE</h2>
+    <h2 class="no-print" id="titulo" name="titulo" >MÁSCARA INFORMATIZADA</h2>
     <div class="form-row 1linha">
     <div class="form-group col-md-2 ">
         
@@ -16,49 +16,49 @@
         </div>
 
     <div class="form-group col-md-2">
-        <label class="no-print" for="datai">Data</label>
-        <input type="text" class="form-control no-print" id="datai" name="datai" placeholder="" value="{{$datah}}">
+        <label class="no-print"  for="datai">Data</label>
+        <input type="text"  Readonly  class="form-control no-print" id="datai" name="datai" placeholder="" value="{{$datah}}">
         </div>
         <div class="form-group col-md-2">
         <label for="posto">posto</label>
-        <input type="text" class="form-control print" id="posto" name="posto" placeholder="" value="{{ Auth::user()->posto }}" >
+        <input type="text" Readonly  class="form-control print" id="posto" name="posto" placeholder="" value="{{ Auth::user()->posto }}" >
         </div>
 
         <div class="form-group col-md-2">
         <label for="usuariologin">usuario/login</label>
-        <input type="text" class="form-control no-print" id="usuariologin" name="usuariologin" placeholder="" value="{{ Auth::user()->login }}" >
+        <input type="text" Readonly  class="form-control no-print" id="usuariologin" name="usuariologin" placeholder="" value="{{ Auth::user()->login }}" >
         </div>
 
         
         <div class="form-group col-md-4">
         <label for="usuarionome">usuario/nome</label>
-        <input type="text" class="form-control no-print" id="usuarionome" name="usuarionome" placeholder="" value="{{ Auth::user()->name }}" >
+        <input type="text" Readonly  class="form-control no-print" id="usuarionome" name="usuarionome" placeholder="" value="{{ Auth::user()->name }}" >
         </div>
         </div>
 
 
-<div class="2linha">
-    <div class="col-md-4">
+<div class="form-row 2linha">
+    <div class="form-group col-md-4">
         <label for="nomereq">Nome do requerente</label>
         <input type="text" class="form-control print" name="nomereq" id="nomereq" placeholder="" value="" >
         </div>
-    <div class="col-md-4">
+    <div class="form-group col-md-4">
         <label for="pai">Nome do pai</label>
         <input type="text" class="form-control print" id="pai" name="pai" placeholder="" value="" >
         </div>
-    <div class="col-md-4">
+    <div class="form-group col-md-4">
         <label for="mae">Nome da mãe</label>
         <input type="text" class="form-control print" id="mae" name="mae" placeholder="" value="" >
         </div>
     </div>
 
 
-    <div class="3linha">
-    <div class="col-md-2">
+    <div class="form-row 3linha">
+    <div class="form-group col-md-2">
         <label for="dtnasci">Data de nascimento</label>
               <input type="date" class="form-control print" id="dtnasci" name="dtnasci" placeholder="" value="" >
         </div>
-    <div class="col-md-2">
+    <div class="form-group col-md-2">
         <label for="sexo">Sexo</label>
             <select class="form-control print" id="sexo" name="sexo" value="" >
               <option value="MASCULINO">MASCULINO</option>
@@ -66,7 +66,7 @@
             </select>
     </div>
 
-    <div class="col-md-2">
+    <div class="form-group col-md-2">
         <label for="via">Via</label>
             <select class="form-control print" id="via" name="via" value="" >
               <option value="1ª VIA">1ª VIA</option>
@@ -76,7 +76,7 @@
               <option value="RET. JUDICIAL">RET. JUDICIAL</option>
             </select>
     </div>
-    <div class="col-md-2">
+    <div class="form-group col-md-2">
         <label for="graui">Grau de Instrução</label>
             <select class="form-control print" id="graui" name="graui" value="" >
               <option value="NÃO ALFABETIZADO">NÃO ALFABETIZADO</option>
@@ -86,25 +86,25 @@
               <option value="2º GRAU COMPLETO">2º GRAU COMPLETO</option>
             </select>
     </div>
-    <div class="col-md-4">
+    <div class="form-group col-md-4">
         <label for="profissao">Profissão</label>
         <input type="text" class="form-control print" id="profissao" name="profissao" placeholder="" value="" >
         </div>
     </div>
     </div>  
-    </br></br></br> 
+    
 
-    <div class="4linha">
-    <div class="col-md-2">
+    <div class="form-row 4linha">
+    <div class="form-group col-md-2">
         <label for="estadonatu">Estado nascimento</label>
         <input type="text" class="form-control print" id="estadonatu" name="estadonatu"placeholder="" value="" >
         </div>
-    <div class="col-md-4">
+    <div class="form-group col-md-4">
         <label for="cidadenatu">Cidade nascimento</label>
         <input type="text" class="form-control print" id="cidadenatu" name="cidadenatu"placeholder="" value="" >
     </div>
 
-    <div class="col-md-3">
+    <div class="form-group col-md-3">
         <label for="pis">PIS</label>
         <input type="text" class="form-control print" id="pis" name="pis" placeholder="" value="" >
         </div>
@@ -114,8 +114,8 @@
         </div>
     </div>
 
-    <div class="5linha">
-    <div class="col-md-2">
+    <div class="form-row 5linha">
+    <div class="form-group col-md-2">
     <label for="estadocivil">estadocivil</label>
             <select class="form-control print" id="estadocivil" name="estadocivil" value="" >
               <option value="SOLTEIRO">SOLTEIRO</option>
@@ -123,34 +123,34 @@
               <option value="DIVORCIADO">DIVORCIADO</option>
              </select>
     </div>
-             <div class="col-md-2">
+             <div class="form-group col-md-2">
     <label for="tipocert">Certidão</label>
             <select class="form-control print" id="tipocert" name="tipocert" value="" >
               <option value="NASCIMENTO">NASCIMENTO</option>
               <option value="CASAMENTO">CASAMENTO</option>
              </select>
             </div>
-            <div class="col-md-3">
+            <div class="form-group col-md-3">
         <label for="comarca">Comarca</label>
         <input type="text" class="form-control print" id="comarca" name="comarca" placeholder="" value="" >
         </div>
 
-        <div class="col-md-2">
+        <div class="form-group col-md-2">
         <label for="comarca">Distrito</label>
         <input type="text" class="form-control print" id="distrito" name="distrito" placeholder="" value="" >
         </div>
 
-        <div class="col-md-1">
+        <div class="form-group col-md-1">
         <label for="livro">Livro</label>
         <input type="text" class="form-control print" id="livro" name="livro" placeholder="" value="" >
         </div>
 
-        <div class="col-md-1">
+        <div class="form-group col-md-1">
         <label for="folha">Folha</label>
         <input type="text" class="form-control print" id="folha" name="folha"placeholder="" value="" >
         </div>
 
-        <div class="col-md-1">
+        <div class="form-group col-md-1">
         <label for="termo">Termo</label>
         <input type="text" class="form-control print" id="termo" name="termo"placeholder="" value="" >
         </div>
@@ -159,56 +159,56 @@
     </div>
 
 
-    <div class="6linha">
-    <div class="col-md-2">
+    <div class="form-row 6linha">
+    <div class="form-group col-md-2">
 
     
         <label for="dtreg">Data do Reg.</label>
-        <input type="text" class="form-control print" id="dtreg" name="dtreg" placeholder="" value="" >
+        <input type="date" class="form-control print" id="dtreg" name="dtreg" placeholder="" value="" >
         </div>
 
-        <div class="col-md-2">
+        <div class="form-group col-md-2">
         <label for="dtcert">Data da Cert.</label>
-        <input type="text" class="form-control print" id="dtcert" name="dtcert" placeholder="" value="" >
+        <input type="date" class="form-control print" id="dtcert" name="dtcert" placeholder="" value="" >
         </div>
 
-        <div class="col-md-2">
+        <div class="form-group col-md-2">
         <label for="cep">CEP</label>
         <input type="text" class="form-control print" id="cep" name="cep" placeholder="" value="" >
         </div>
 
-        <div class="col-md-2">
+        <div class="form-group col-md-2">
         <label for="telefone">Telefone</label>
         <input type="text" class="form-control print" id="telefone" name="telefone" placeholder="" value="" >
         </div>
 
-        <div class="col-md-2">
+        <div class="form-group col-md-2">
         <label for="cidaderes">Cidade reside</label>
         <input type="text" class="form-control print" id="cidaderes" name="cidaderes" placeholder="" value="" >
         </div>
 
-        <div class="col-md-2">
+        <div class="form-group col-md-2">
         <label for="estadores">Estado reside</label>
         <input type="text" class="form-control print" id="estadores" name="estadores" placeholder="" value="" >
         </div>
         </div>
-        <div class="7linha">
+        <div class="form-row 7linha">
         <div class="col-md-4">
         <label for="endereco">Endereço</label>
         <input type="text" class="form-control print" id="endereco" name="endereco" placeholder="" value="" >
         </div>
 
-        <div class="col-md-2">
+        <div class="form-group col-md-2">
         <label for="numeroendereco">Nº</label>
         <input type="text" class="form-control print" id="numeroendereco" name="numeroendereco" placeholder="" value="" >
         </div>
 
-        <div class="col-md-4">
+        <div class="form-group col-md-4">
         <label for="complementoendereco">Complemento</label>
         <input type="text" class="form-control print" id="complementoendereco" name="complementoendereco" placeholder="" value="" >
         </div>
 
-        <div class="col-md-2">
+        <div class="form-group col-md-2">
         <label for="bairro">Bairro</label>
         <input type="text" class="form-control print" id="bairro" name="bairro" placeholder="" value="" >
         </div>
@@ -216,13 +216,13 @@
         </div>
         
         
-        <div class="8linha">
-        <div class="col-md-1">
+        <div class="form-row 8linha">
+        <div class="form-group col-md-1">
         <label for="altura">Altura</label>
         <input type="text" class="form-control print" id="altura" name="altura" placeholder="" value="" >
         </div>
         
-        <div class="col-md-1">
+        <div class="form-group col-md-1">
         <label for="cutis">Cutis</label>
             <select class="form-control print" id="cutis" name="cutis" value="" >
               <option value="PRETA">PRETA</option>
@@ -231,7 +231,7 @@
            </select>
             </div>
 
-            <div class="col-md-2">
+            <div class="form-group col-md-2">
 
         <label for="cordocabelo">Cor do Cabelo</label>
             <select class="form-control print" id="cordocabelo" name="cordocabelo" value="" >
@@ -242,7 +242,7 @@
               <option value="BRANCOS">BRANCOS</option>
            </select>
             </div>         
-            <div class="col-md-2">
+            <div class="form-group col-md-2">
         <label for="barba">Barba</label>
             <select class="form-control print" id="barba" name="barba" value="" >
               <option value="IMBERBE">IMBERBE</option>
@@ -253,7 +253,7 @@
            </select>
             </div>
 
-            <div class="col-md-2">
+            <div class="form-group col-md-2">
         <label for="bigode">Bigode</label>
             <select class="form-control print" id="bigode" name="bigode" value="" >
               <option value="NENHUM">NENHUM</option>
@@ -265,7 +265,7 @@
            </select>
             </div>
 
-            <div class="col-md-2">
+            <div class="form-group col-md-2">
         <label for="corolho">Cor do Olho</label>
             <select class="form-control print" id="cordoolho" name="cordoolho"value="" >
               <option value="CASTANHO">CASTANHO</option>
@@ -277,7 +277,7 @@
            </select>
             </div>
 
-            <div class="col-md-2">
+            <div class="form-group col-md-2">
         <label for="tipodoolho">Tipo do Olho</label>
             <select class="form-control print" id="tipodoolho" name="tipodoolho" value="" >
               <option value="REDONDOS">REDONDOS</option>
@@ -289,13 +289,13 @@
 
         
     </div>
-    <div class="6linha">
+    <div class="form-row 6linha">
 
-    <div class="col-md-12">
+    <div class="form-group col-md-12">
         <label for="anomalias">Anomalias.</label>
         <input type="text" class="form-control print" id="anomalias" name="anomalias" placeholder="" value="" >
         </div>
-    <div class="col-md-12">
+    <div class="form-group col-md-12">
         <label for="obs">Obervações.</label>
         <input type="text" class="form-control print" id="obs" name="obs" placeholder="" value="" >
         </div>
@@ -305,7 +305,7 @@
         </div>
 
         <div>
-        </br></br></br>   </br></br></br>
+        
  <button class="no-print" type="submit">ENVIAR</button>
  <input type="button" class="no-print" value="IMPRIMIR" onClick="window.print()"/>
  </div>

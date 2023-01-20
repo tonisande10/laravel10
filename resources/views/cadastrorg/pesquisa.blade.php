@@ -7,7 +7,7 @@
 <form method="GET" action="{{ route('post.push') }}">
 @csrf
 
-    <h2 class="no-print">MASCÁRA INFORMATIZADA</h2>
+    <h2 name="titulo" id="titulo" class="no-print">PESQUISA DE REGISTROS</h2>
     <div class="1linha">
   <!-- 
     <div class="col-md-2">
@@ -40,22 +40,21 @@
         </div>
  -->
 
-<div class="2linha">
-    <div class="col-md-4">
+<div class="form-row 2linha">
+    <div class="form-group col-md-4">
         <label for="nomereq">Nome do requerente</label>
         <input type="text" class="form-control print" name="nomereq" id="nomereq" placeholder="" value="">
         </div>
        
-    <div class="col-md-4">
+    <div class="form-group col-md-4">
         <label for="pai">Nome do pai</label>
         <input type="text" class="form-control print" id="pai" placeholder="" value="" >
         </div>
-    <div class="col-md-4">
+    <div class="form-group col-md-4">
         <label for="mae">Nome da mãe</label>
         <input type="text" class="form-control print" id="mae" placeholder="" value="" >
         </div>
-    </div></br></br></br>
-
+    </div>
 
     <!-- <div class="3linha">
     <div class="col-md-2">
@@ -237,7 +236,7 @@
        
         </div>
         -->
-        <button type="submit">zorra</button>
+        <button type="submit">Pesquisar</button>
     
   
 </form>

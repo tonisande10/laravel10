@@ -14,9 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/ddd', function () {
     return view('welcome');
 });
+
+Route::get('/', function () {
+    return view('cadastrorg/inicialrg');
+})->middleware(['auth', 'verified'])->name('inicio');;
+
 
 Route::get('/edit1', function () {
     return view('cadastrorg/edit1');

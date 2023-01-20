@@ -184,8 +184,10 @@ public function update2(Request $request, $id)
         'cidadenatu' => $request->cidadenatu,
         'pis' => $request->pis,
         'cpf' => $request->cpf,
+        'estadocivil' => $request->estadocivil,
         'tipocert' => $request->tipocert,
         'comarca' => $request->comarca,
+        'distrito' => $request->distrito,
         'livro' => $request->livro,
         'folha' => $request->folha,
         'termo' => $request->termo,
@@ -195,10 +197,19 @@ public function update2(Request $request, $id)
         'cordocabelo' => $request->cordocabelo,
         'barba' => $request->barba,
         'bigode' => $request->bigode,
-        'corolho' => $request->corolho,
-        'tipodolho' => $request->tipolho,
+        'corolho' => $request->cordoolho,
+        'tipodolho' => $request->tipodoolho,
         'obs' => $request->obs,
         'anomalias' => $request->anomalias,
+        'cep' => $request->cep,
+        'telefone' => $request->telefone,
+        'cidaderes' => $request->cidaderes,
+        'estadores' => $request->estadores,
+        'endereco' => $request->endereco,
+        'numeroendereco' => $request->numeroendereco,
+        'bairro' => $request->bairro,
+        'complementoendereco' => $request->complementoendereco
+
 
     ]);
 return "produto cadastrado com sucesso";
