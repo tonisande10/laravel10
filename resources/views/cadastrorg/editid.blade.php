@@ -17,7 +17,7 @@
 
     <div class="form-group col-md-2">
         <label class="no-print" for="datai">Data</label>
-        <input type="text" class="form-control no-print"  id="datai" name="datai" placeholder="" value="{{$datah}}">
+        <input type="text" class="form-control print"  id="datai" name="datai" placeholder="" value="{{$datah}}">
         </div>
         <div class="form-group col-md-2">
         <label for="posto">posto</label>
@@ -26,7 +26,7 @@
 
         <div class="form-group col-md-2">
         <label for="usuariologin">usuario/login</label>
-        <input type="text" Readonly  class="form-control no-print" id="usuariologin" name="usuariologin" placeholder="" value="{{ Auth::user()->login }}" >
+        <input type="text" Readonly  class="form-control print" id="usuariologin" name="usuariologin" placeholder="" value="{{ Auth::user()->login }}" >
         </div>
 
         
@@ -294,7 +294,7 @@
         <div class="form-row 8linha">
         <div class="form-group col-md-1">
         <label for="altura">Altura</label>
-        <input type="text" class="form-control print"   requiredid="altura" name="altura" placeholder="" value="{{$events->altura}}" >
+        <input type="text" class="form-control print"   required id="altura" name="altura" placeholder="" value="{{$events->altura}}" >
         </div>
         
         <div class="form-group col-md-1">

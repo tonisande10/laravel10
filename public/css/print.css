@@ -6,7 +6,7 @@
     filter: none;
     -ms-filter: none;
     border: none;
-    font-size: 12px;
+    font-size: 15px;
   }
 
  select {
@@ -46,7 +46,7 @@
   }
   #nomereq {
     position: fixed;
-    top: 35px;
+    top: 40px;
     left: 40px;
     height: max-content;
     width: max-content;
@@ -54,39 +54,39 @@
   }
   #pai {
     position: fixed;
-    top: 57px;
-    left: 40px;
+    top: 70px;
+    left: 42px;
     height: max-content;
     width: max-content;
    
   }
   #mae {
     position: fixed;
-    top: 80px;
+    top: 102px;
     left: 40px;
     height: max-content;
-    width: max-content;
+    width: 100%;
    
   }
   #dtnasci{
     position: fixed;
-    top: 105px;
-    left: 215px;
+    top: 140px;
+    left: 270px;
     height: max-content;
     width: max-content;
   }
   #sexo {
     position: fixed;
-    top: 105px;
-    left: 425px;
+    top: 140px;
+    left: 580px;
     height: max-content;
     width: max-content;
     
   }
   #estadocivil {
     position: fixed;
-    top: 131px;
-    left: 215px;
+    top: 174px;
+    left: 270px;
     height: max-content;
     width: max-content;
     
@@ -95,178 +95,180 @@
   #via {
     position: fixed;
    
-    top: 131px;
-    left: 425px;
+    top: 174px;
+    left: 580px;
     height: max-content;
     width: max-content;
   
   }
   #graui {
     position: fixed;
-    top: 154px;
-    left: 215px;
+    top: 208px;
+    left: 270px;
     height: max-content;
     width: max-content;
   
   }
   #profissao {
     position: fixed;
-    top: 174px;
-    left: 215px;
+    top: 240px;
+    left: 270px;
     height: max-content;
     width: max-content;
  
   }
   #estadonatu {
     position: fixed;
-    top: 198px;
-    left: 215px;
+    top: 276px;
+    left: 400px;
     height: max-content;
     width: max-content;
   }
   #cidadenatu {
     position: fixed;
-    top: 198px;
-    left: 350px;
+    top: 276px;
+    left: 270px;
     height: max-content;
     width: max-content;
   }
   #pis {
     position: fixed;
-    top: 222px;
-    left: 215px;
+    top: 300px;
+    left: 270px;
     height: max-content;
     width: max-content;
   }
   #cpf {
     position: fixed;
-    top: 242px;
-    left: 215px;
+    top: 330px;
+    left: 270px;
     height: max-content;
     width: max-content;
   }
   #telefone {
     position: fixed;
-    top: 242px;
+    top: 330px;
     left: 480px;
     height: max-content;
     width: max-content;
   }
   #tipocert {
     position: fixed;
-    top: 262px;
+    top: 362px;
     left: 40px;
     height: max-content;
     width: max-content;
   }
   #comarca {
     position: fixed;
-    top: 262px;
-    left: 165px;
+    top: 362px;
+    left: 210px;
     height: max-content;
     width: max-content;
   }
   #distrito {
     position: fixed;
-    top: 262px;
-    left: 470px;
+    top: 362px;
+    left: 630px;
     height: max-content;
     width: max-content;
   }
   #livro {
     position: fixed;
-    top: 282px;
+    top: 385px;
     left: 40px;
   }
   #folha {
     position: fixed;
-    top: 282px;
-    left: 165px;
+    top: 385px;
+    left: 210px;
   }
   #termo {
     position: fixed;
-    top: 282px;
-    left: 325px;
+    top: 385px;
+    left: 420px;
   }
   #dtcert {
     position: fixed;
-    top: 282px;
-    left: 472px;
-    z-index: 999;
+    top: 385px;
+    
+    left: 630px;
     width: max-content;
     height: max-content;
   }
   #dtreg {
     position: fixed;
-    z-index: 50;
-    top: 282px;
-    left: 630px;
+    left: 848px;
+    top: 385px;
+    
     height: max-content;
     width: max-content;
   }
+
   #cutis {
     position: fixed;
-    top: 302px;
+    top: 415px;
     left: 60px;
     height: max-content;
     width: max-content;
   }
   #altura {
     position: fixed;
-    z-index: 50;
-    top: 302px;
-    left: 590px;
+   
+    top: 415px;
+    left: 800px;
     height: max-content;
     width: max-content;
   }
   #cordocabelo {
     position: fixed;
-    top: 302px;
-    left: 310px;
-    z-index: 999;
+    top: 415px;
+    left: 365px;
+   
     height: max-content;
     width: max-content;
   }
 
 #barba {
   position: fixed;
-  top: 322px;
+  top: 440px;
   left: 60px;
-  z-index: 999;
+ 
   height: max-content;
   width: max-content;
 }
 
 #bigode {
   position: fixed;
-  top: 322px;
-  left: 310px;
-  z-index: 999;
+  top: 440px;
+  left: 365px;
+ 
   height: max-content;
   width: max-content;
 }
 
   #cordoolho {
   position: fixed;
-  z-index: 15;
-  top: 322px;
-  left: 570px;
+  
+  top: 440px;
+  left: 890px;
   height: max-content;
   width: max-content;
 }
 
 #tipodoolho {
   position: fixed;
-  top: 322px;
-  left: 660px;
+  top: 440px;
+  left: 800px;
   height: max-content;
-  z-index: 9999;
-  width: 100%;
+  width: max-content;
+
+ 
 }
 
 #anomalias {
   position: fixed;
-  top: 342px;
+  top: 465px;
   left: 80px;
   height: max-content;
   width: max-content;
@@ -274,85 +276,103 @@
 
 #endereco {
   position: fixed;
-  top: 362px;
-  left: 70px;
+  top: 497px;
+  left: 80px;
   height: max-content;
   width: 100%;
 }
 
 #numeroendereco {
   position: fixed;
-  z-index: 50;
-  top: 362px;
-  left: 448px;
+  left: 620px;
+  top: 497px;
   height: max-content;
   width: max-content;
 }
 
 #complementoendereco {
   position: fixed;
-  top: 362px;
-  left: 532px;
+  top: 497px;
+  left: 725px;
   height: max-content;
   width: max-content;
-  white-space: nowrap;
-  overflow: hidden;
- text-overflow: ellipsis;
- z-index: 999999;
+  
 }
 
 #bairro {
   position: fixed;
-  top: 382px;
-  left: 70px;
+  top: 522px;
+  left: 80px;
   height: max-content;
-  z-index: 99999;
-  width: max-content;
+   width: max-content;
 }
-/* deixa comentado- alteramos de 388 para 378 */
-#obs {
+/* lembrar que o nome aqui é de cidade que mora, tem que trocar no html e no banco*/
+#cidaderes {
   position: fixed;
-  top: 402px;
-  left: 40px;
-  border: none;
+  top: 522px;
+  left: 430px; 
   height: max-content;
   width: max-content;
-  white-space: nowrap;
-   overflow: hidden;
-  text-overflow: ellipsis;
 }
+
+#estadores{
+  position: fixed;
+  top: 522px;
+  left: 800px; 
+  height: max-content;
+  width: 40px;
+    
+}
+
 
 
 
 
 #cep {
   position: fixed;
-  top: 382px;
-  left: 655px;
+  top: 522px;
+  left: 880px;
   height: max-content;
   width: max-content;
+
 }
-/* deixa comentado- alteramos de 405 para 415 */
-.dataid1 { 
+
+/* deixa comentado- alteramos de 388 para 378 */
+#obs {
   position: fixed;
-  top: 425px;
-  left: 655px;
+  top: 550px;
+  left: 40px;
+  border: none;
+  height: max-content;
+  width: max-content;
+
+}
+
+
+
+
+
+/* deixa comentado- alteramos de 405 para 415 */
+#datai { 
+  position: fixed;
+  top: 572px;
+  left: 850px;
   height: max-content;
   width: max-content;
 }
 
 #usuariologin {
   position: fixed;
-  top: 442px;
-  left: 655px;
+  top: 632px;
+  left: 880px;
   height: max-content;
   width: max-content;
 }
 
 #posto {
   position: fixed;
-  top: 425px;
-  left: 657px;
+  top: 602px;
+  left: 850px;
   height: max-content;
   width: max-content; 
 }
@@ -361,27 +381,6 @@
 
 
 
-#estadores{
-  position: fixed;
-  top: 370px;
-  left: 585px; 
-  height: max-content;
-  z-index: 99999;
-  width: max-content;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  
-}
-
-/* lembrar que o nome aqui é de cidade que mora, tem que trocar no html e no banco*/
-#cidaderes {
-  position: fixed;
-  top: 370px;
-  left: 330px; 
-  height: max-content;
-  z-index: 99999;
-  width: max-content;
-}
 
 
 }
