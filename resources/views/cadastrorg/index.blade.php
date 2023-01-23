@@ -17,7 +17,7 @@
 
     <div class="form-group col-md-2">
         <label class="no-print"  for="datai">Data</label>
-        <input type="date"  Readonly  class="form-control no-print" id="datai" name="datai" placeholder="" value="{{$datah}}">
+        <input type="date"  Readonly  class="form-control print" id="datai" name="datai" placeholder="" value="{{$datah}}">
         </div>
         <div class="form-group col-md-2">
         <label for="posto">posto</label>
@@ -26,7 +26,7 @@
 
         <div class="form-group col-md-2">
         <label for="usuariologin">usuario/login</label>
-        <input type="text" Readonly  class="form-control no-print" id="usuariologin" name="usuariologin" placeholder="" value="{{ Auth::user()->login }}" >
+        <input type="text" Readonly  class="form-control print" id="usuariologin" name="usuariologin" placeholder="" value="{{ Auth::user()->login }}" >
         </div>
 
         
