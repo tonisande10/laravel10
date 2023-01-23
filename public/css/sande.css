@@ -26,11 +26,13 @@ body {background-color: rgb(229, 234, 234);
 } */
 
 .cat {
-    width: 1200px;
-    height: 1200px;
-    overflow: hidden;
+    width: 2000px;
+    height: 1000px;
+    
    }
    #imginicial {
     
-    width: 100%; 
+    width: 2000px; 
+    height: 1000px;
+    
    }

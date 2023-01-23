@@ -1,13 +1,19 @@
 @media print {
+  * {
+    background: transparent;
+    color: #000;
+    text-shadow: none;
+    filter: none;
+    -ms-filter: none;
+    border: none;
+    font-size: 12px;
+  }
 
  select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: url(../images/select-angle-down.png) no-repeat center right #FFF;
-  border: 1px solid #333;
-  font-size: 15px;
-  padding-right: 20px;
+  appearance: none !important;
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
 }
   
   label{
@@ -16,7 +22,7 @@
   body {
     background-color: #1d61e7;
     border: 0;
-    font-size: 1px;
+    
   }
   .print {
     display: block;
@@ -29,10 +35,7 @@
     border: none;
   }
 
-  #nomereq{
 
-    background-color: red;
-  }
 
 #rg {
     position: fixed;
@@ -45,19 +48,24 @@
     position: fixed;
     top: 35px;
     left: 40px;
-
+    height: max-content;
+    width: max-content;
   
   }
   #pai {
     position: fixed;
     top: 57px;
     left: 40px;
+    height: max-content;
+    width: max-content;
    
   }
   #mae {
     position: fixed;
     top: 80px;
     left: 40px;
+    height: max-content;
+    width: max-content;
    
   }
   #dtnasci{
@@ -73,6 +81,7 @@
     left: 425px;
     height: max-content;
     width: max-content;
+    
   }
   #estadocivil {
     position: fixed;
@@ -80,15 +89,17 @@
     left: 215px;
     height: max-content;
     width: max-content;
+    
   }
   
   #via {
     position: fixed;
-    z-index: 50;
+   
     top: 131px;
     left: 425px;
     height: max-content;
     width: max-content;
+  
   }
   #graui {
     position: fixed;
@@ -96,6 +107,7 @@
     left: 215px;
     height: max-content;
     width: max-content;
+  
   }
   #profissao {
     position: fixed;
@@ -103,6 +115,7 @@
     left: 215px;
     height: max-content;
     width: max-content;
+ 
   }
   #estadonatu {
     position: fixed;
@@ -127,57 +140,57 @@
   }
   #cpf {
     position: fixed;
-    top: 240px;
+    top: 242px;
     left: 215px;
     height: max-content;
     width: max-content;
   }
   #telefone {
     position: fixed;
-    top: 240px;
+    top: 242px;
     left: 480px;
     height: max-content;
     width: max-content;
   }
   #tipocert {
     position: fixed;
-    top: 257px;
+    top: 262px;
     left: 40px;
     height: max-content;
     width: max-content;
   }
   #comarca {
     position: fixed;
-    top: 257px;
+    top: 262px;
     left: 165px;
     height: max-content;
     width: max-content;
   }
   #distrito {
     position: fixed;
-    top: 257px;
+    top: 262px;
     left: 470px;
     height: max-content;
     width: max-content;
   }
   #livro {
     position: fixed;
-    top: 274px;
+    top: 282px;
     left: 40px;
   }
   #folha {
     position: fixed;
-    top: 274px;
+    top: 282px;
     left: 165px;
   }
   #termo {
     position: fixed;
-    top: 274px;
+    top: 282px;
     left: 325px;
   }
   #dtcert {
     position: fixed;
-    top: 274px;
+    top: 282px;
     left: 472px;
     z-index: 999;
     width: max-content;
@@ -186,14 +199,14 @@
   #dtreg {
     position: fixed;
     z-index: 50;
-    top: 274px;
+    top: 282px;
     left: 630px;
     height: max-content;
     width: max-content;
   }
   #cutis {
     position: fixed;
-    top: 296px;
+    top: 302px;
     left: 60px;
     height: max-content;
     width: max-content;
@@ -201,14 +214,14 @@
   #altura {
     position: fixed;
     z-index: 50;
-    top: 296px;
+    top: 302px;
     left: 590px;
     height: max-content;
     width: max-content;
   }
   #cordocabelo {
     position: fixed;
-    top: 296px;
+    top: 302px;
     left: 310px;
     z-index: 999;
     height: max-content;
@@ -217,7 +230,7 @@
 
 #barba {
   position: fixed;
-  top: 314px;
+  top: 322px;
   left: 60px;
   z-index: 999;
   height: max-content;
@@ -226,7 +239,7 @@
 
 #bigode {
   position: fixed;
-  top: 314px;
+  top: 322px;
   left: 310px;
   z-index: 999;
   height: max-content;
@@ -236,7 +249,7 @@
   #cordoolho {
   position: fixed;
   z-index: 15;
-  top: 314px;
+  top: 322px;
   left: 570px;
   height: max-content;
   width: max-content;
@@ -244,7 +257,7 @@
 
 #tipodoolho {
   position: fixed;
-  top: 314px;
+  top: 322px;
   left: 660px;
   height: max-content;
   z-index: 9999;
@@ -253,7 +266,7 @@
 
 #anomalias {
   position: fixed;
-  top: 332px;
+  top: 342px;
   left: 80px;
   height: max-content;
   width: max-content;
@@ -261,24 +274,24 @@
 
 #endereco {
   position: fixed;
-  top: 352px;
+  top: 362px;
   left: 70px;
   height: max-content;
   width: 100%;
 }
 
-#numero {
+#numeroendereco {
   position: fixed;
   z-index: 50;
-  top: 352px;
+  top: 362px;
   left: 448px;
   height: max-content;
   width: max-content;
 }
 
-#complemento {
+#complementoendereco {
   position: fixed;
-  top: 352px;
+  top: 362px;
   left: 532px;
   height: max-content;
   width: max-content;
@@ -290,7 +303,7 @@
 
 #bairro {
   position: fixed;
-  top: 370px;
+  top: 382px;
   left: 70px;
   height: max-content;
   z-index: 99999;
@@ -299,7 +312,7 @@
 /* deixa comentado- alteramos de 388 para 378 */
 #obs {
   position: fixed;
-  top: 382px;
+  top: 402px;
   left: 40px;
   border: none;
   height: max-content;
@@ -314,7 +327,7 @@
 
 #cep {
   position: fixed;
-  top: 370px;
+  top: 382px;
   left: 655px;
   height: max-content;
   width: max-content;
@@ -328,7 +341,7 @@
   width: max-content;
 }
 
-#usuario {
+#usuariologin {
   position: fixed;
   top: 442px;
   left: 655px;

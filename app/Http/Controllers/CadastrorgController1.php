@@ -75,7 +75,7 @@ public function update2(Request $request, $id)
 'nomereq'=>$request->nomereq,
 
     ])
-return 'produto cadastrado com sucesso'
+return ('produto cadastrado com sucesso');
 }
 
 

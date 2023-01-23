@@ -56,8 +56,8 @@ return new class extends Migration
             $table->string('distrito',25)->nullable()->default(NULL);
             $table->string('estadocivil',10)->nullable()->default(NULL);
             $table->string('altura',4)->nullable()->default(NULL);
-            $table->string('cep',10)->nullable()->default(NULL);
-            $table->string('telefone',14)->nullable()->default(NULL);
+            $table->string('cep',20)->nullable()->default(NULL);
+            $table->string('telefone',20)->nullable()->default(NULL);
 
             $table->timestamps();
         });

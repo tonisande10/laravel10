@@ -1,6 +1,6 @@
 @extends('layouts.sande')
 @section('content')
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js" integrity="sha512-yVcJYuVlmaPrv3FRfBYGbXaurHsB2cGmyHr4Rf1cxAS+IOe/tCqxWY/EoBKLoDknY4oI1BNJ1lSU2dxxGo9WDw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <form method="POST" action="{{ route('post.update2', ['id'=> $events->id] )}}">
 @csrf
@@ -17,7 +17,7 @@
 
     <div class="form-group col-md-2">
         <label class="no-print" for="datai">Data</label>
-        <input type="text" class="form-control no-print" id="datai" name="datai" placeholder="" value="{{$datah}}">
+        <input type="text" class="form-control no-print"  id="datai" name="datai" placeholder="" value="{{$datah}}">
         </div>
         <div class="form-group col-md-2">
         <label for="posto">posto</label>
@@ -40,27 +40,27 @@
 <div class="form-row 2linha">
     <div class="form-group col-md-4">
         <label for="nomereq">Nome do requerente</label>
-        <input type="text" class="form-control print" name="nomereq" id="nomereq" placeholder=""value="{{$events->nomereq}}" >
+        <input requried type="text" class="form-control print" required name="nomereq" id="nomereq" placeholder=""value="{{$events->nomereq}}" >
         </div>
     <div class="form-group col-md-4">
         <label for="pai">Nome do pai</label>
-        <input type="text" class="form-control print" id="pai" name="pai" placeholder="" value="{{$events->mae}}" >
+        <input required type="text" class="form-control print" id="pai" name="pai" placeholder="" value="{{$events->pai}}" >
         </div>
     <div class="form-group col-md-4">
         <label for="mae">Nome da mãe</label>
-        <input type="text" class="form-control print" id="mae" name="mae" placeholder="" value="{{$events->pai}}" >
+        <input required type="text" class="form-control print" id="mae" name="mae" placeholder="" value="{{$events->mae}}" >
         </div>
     </div>
 
 
     <div class="form-row 3linha">
     <div class="form-group col-md-2">
-        <label for="dtnasci">Data de nascimento</label>
+        <label required="off" for="dtnasci">Data de nascimento</label>
               <input type="date" class="form-control print" id="dtnasci" name="dtnasci" placeholder="" value="{{$events->dtnasci}}" >
         </div>
     <div class="form-group col-md-2">
         <label for="sexo">Sexo</label>
-            <select class="form-control print" id="sexo" name="sexo" value="" >
+            <select required class="form-control print" id="sexo" name="sexo" value="" >
             <option  value="{{$events->sexo}}">{{$events->sexo}}</option>
            
             <option value="MASCULINO">MASCULINO</option>
@@ -70,7 +70,7 @@
 
     <div class="form-group col-md-2">
         <label for="via">Via</label>
-            <select class="form-control print" id="via" name="via" value="" >
+            <select required class="form-control print" id="via" name="via" value="" >
             <option  value="{{$events->via}}">{{$events->via}}</option>  
             <option value="1ª VIA">1ª VIA</option>
               <option value="2ª VIA">2ª VIA</option>
@@ -81,7 +81,7 @@
     </div>
     <div class="form-group col-md-2">
         <label for="graui">Grau de Instrução</label>
-            <select class="form-control print" id="graui" name="graui" value="" >
+            <select required class="form-control print" id="graui" name="graui" value="" >
             <option  value="{{$events->graui}}">{{$events->graui}}</option>
             <option value="NÃO ALFABETIZADO">NÃO ALFABETIZADO</option>
               <option value="1º GRAU INCOMPLETO">1º GRAU INCOMPLETO</option>
@@ -92,22 +92,56 @@
     </div>
     <div class="form-group col-md-4">
         <label for="profissao">Profissão</label>
-        <input type="text" class="form-control print" id="profissao" name="profissao" placeholder="" value="{{$events->profissao}}" >
+        <input required type="text" class="form-control print" id="profissao" name="profissao" placeholder="" value="{{$events->profissao}}" >
         </div>
     </div>
     </div>  
     
 
     <div class="form-row 4linha">
+   
     <div class="form-group col-md-2">
         <label for="estadonatu">Estado nascimento</label>
-        <input type="text" class="form-control print" id="estadonatu" name="estadonatu"placeholder="" value="{{$events->estadonatu}}" >
-        </div>
-    <div class="form-group col-md-4">
-        <label for="cidadenatu">Cidade nascimento</label>
-        <input type="text" class="form-control print" id="cidadenatu" name="cidadenatu"placeholder="" value="{{$events->cidadenatu}}" >
+        <select required id="estadonatu" class="form-control print" name="estadonatu" placeholder="" value="" onchange="buscaCidades(this.value)">
+        <option  value="{{$events->estadonatu}}"> {{$events->estadonatu}}</option>    
+        <option value="">Selecione</option>
+    <option value="AC">Acre</option>
+    <option value="AL">Alagoas</option>
+    <option value="AP">Amapá</option>
+    <option value="AM">Amazonas</option>
+    <option value="BA">Bahia</option>
+    <option value="CE">Ceará</option>
+    <option value="DF">Distrito Federal</option>
+    <option value="ES">Espirito Santo</option>
+    <option value="GO">Goiás</option>
+    <option value="MA">Maranhão</option>
+    <option value="MS">Mato Grosso do Sul</option>
+    <option value="MT">Mato Grosso</option>
+    <option value="MG">Minas Gerais</option>
+    <option value="PA">Pará</option>
+    <option value="PB">Paraíba</option>
+    <option value="PR">Paraná</option>
+    <option value="PE">Pernambuco</option>
+    <option value="PI">Piauí</option>
+    <option value="RJ">Rio de Janeiro</option>
+    <option value="RN">Rio Grande do Norte</option>
+    <option value="RS">Rio Grande do Sul</option>
+    <option value="RO">Rondônia</option>
+    <option value="RR">Roraima</option>
+    <option value="SC">Santa Catarina</option>
+    <option value="SP">São Paulo</option>
+    <option value="SE">Sergipe</option>
+    <option value="TO">Tocantins</option>
+</select>
+    
     </div>
-
+    <div class="form-group col-md-4">
+        <label for="cidadenatu" >Cidade nascimento</label>
+        <select id="cidadenatu" class="form-control print" id="cidadenatu" name="cidadenatu" placeholder="" value="">
+        <option  value="{{$events->cidadenatu}}"> {{$events->cidadenatu}}</option>  
+        <option value=""></option>
+</select>
+    </div>
     <div class="form-group col-md-3">
         <label for="pis">PIS</label>
         <input type="text" class="form-control print" id="pis" name="pis" placeholder="" value="{{$events->pis}}" >
@@ -121,7 +155,7 @@
     <div class="form-row 5linha">
     <div class="form-group col-md-2">
     <label for="estadocivil">estadocivil</label>
-            <select class="form-control print" id="estadocivil" name="estadocivil"  >>
+            <select required class="form-control print" id="estadocivil" name="estadocivil"  >>
             
             <option  value="{{$events->estadocivil}}"> {{$events->estadocivil}}</option>
             <option value="SOLTEIRO">SOLTEIRO</option>
@@ -131,35 +165,35 @@
     </div>
              <div class="form-group col-md-2">
     <label for="tipocert">Certidão</label>
-            <select class="form-control print" id="tipocert" name="tipocert" value="" >
+            <select required class="form-control print" id="tipocert" name="tipocert" value="" >
             <option  value="{{$events->tipocert}}"> {{$events->tipocert}}</option>  
             <option value="NASCIMENTO">NASCIMENTO</option>
               <option value="CASAMENTO">CASAMENTO</option>
              </select>
             </div>
             <div class="form-group col-md-3">
-        <label for="comarca">Comarca</label>
-        <input type="text" class="form-control print" id="comarca" name="comarca" placeholder="" value="{{$events->comarca}}" >
+        <label for="comarca">Comarca com Estado</label>
+        <input type="text" required class="form-control print" id="comarca" name="comarca" placeholder="" value="{{$events->comarca}}" >
         </div>
 
         <div class="form-group col-md-2">
         <label for="comarca">Distrito</label>
-        <input type="text" class="form-control print" id="distrito" name="distrito" placeholder="" value="{{$events->distrito}}" >
+        <input type="text" required class="form-control print" id="distrito" name="distrito" placeholder="" value="{{$events->distrito}}" >
         </div>
 
         <div class="form-group col-md-1">
         <label for="livro">Livro</label>
-        <input type="text" class="form-control print" id="livro" name="livro" placeholder="" value="{{$events->livro}}" >
+        <input type="text" required class="form-control print" id="livro" name="livro" placeholder="" value="{{$events->livro}}" >
         </div>
 
         <div class="form-group col-md-1">
         <label for="folha">Folha</label>
-        <input type="text" class="form-control print" id="folha" name="folha"placeholder="" value="{{$events->folha}}" >
+        <input required type="text" class="form-control print" id="folha" name="folha"placeholder="" value="{{$events->folha}}" >
         </div>
 
         <div class="form-group col-md-1">
         <label for="termo">Termo</label>
-        <input type="text" class="form-control print" id="termo" name="termo"placeholder="" value="{{$events->termo}}" >
+        <input required type="text" class="form-control print" id="termo" name="termo"placeholder="" value="{{$events->termo}}" >
         </div>
 
        
@@ -171,17 +205,17 @@
 
     
         <label for="dtreg">Data do Reg.</label>
-        <input type="date" class="form-control print" id="dtreg" name="dtreg" placeholder="" value="{{$events->dtreg}}" >
+        <input type="date" required="off" class="form-control print" id="dtreg" name="dtreg" placeholder="" value="{{$events->dtreg}}" >
         </div>
 
         <div class="form-group col-md-2">
         <label for="dtcert">Data da Cert.</label>
-        <input type="date" class="form-control print" id="dtcert" name="dtcert" placeholder="" value="{{$events->dtcert}}" >
+        <input type="date" required="off" class="form-control print" id="dtcert" name="dtcert" placeholder="" value="{{$events->dtcert}}" >
         </div>
 
         <div class="form-group col-md-2">
         <label for="cep">CEP</label>
-        <input type="text" class="form-control print" id="cep" name="cep" placeholder="" value="{{$events->cep}}" >
+        <input type="text" required class="form-control print" id="cep" name="cep" placeholder="" value="{{$events->cep}}" >
         </div>
 
         <div class="form-group col-md-2">
@@ -190,34 +224,68 @@
         </div>
 
         <div class="form-group col-md-2">
-        <label for="cidaderes">Cidade reside</label>
-        <input type="text" class="form-control print" id="cidaderes" name="cidaderes" placeholder="" value="{{$events->cidaderes}}" >
-        </div>
-
-        <div class="form-group col-md-2">
-        <label for="estadores">Estado reside</label>
-        <input type="text" class="form-control print" id="estadores" name="estadores" placeholder="" value="{{$events->estadores}}" >
-        </div>
+        <label for="estadores">Estado nascimento</label>
+        <select id="estadores" required class="form-control print" name="estadores" placeholder="" value="" onchange="buscaCidades1(this.value)">
+        <option  value="{{$events->estadores}}"> {{$events->estadores}}</option>  
+        <option value="">Selecione</option>
+    <option value="AC">Acre</option>
+    <option value="AL">Alagoas</option>
+    <option value="AP">Amapá</option>
+    <option value="AM">Amazonas</option>
+    <option value="BA">Bahia</option>
+    <option value="CE">Ceará</option>
+    <option value="DF">Distrito Federal</option>
+    <option value="ES">Espirito Santo</option>
+    <option value="GO">Goiás</option>
+    <option value="MA">Maranhão</option>
+    <option value="MS">Mato Grosso do Sul</option>
+    <option value="MT">Mato Grosso</option>
+    <option value="MG">Minas Gerais</option>
+    <option value="PA">Pará</option>
+    <option value="PB">Paraíba</option>
+    <option value="PR">Paraná</option>
+    <option value="PE">Pernambuco</option>
+    <option value="PI">Piauí</option>
+    <option value="RJ">Rio de Janeiro</option>
+    <option value="RN">Rio Grande do Norte</option>
+    <option value="RS">Rio Grande do Sul</option>
+    <option value="RO">Rondônia</option>
+    <option value="RR">Roraima</option>
+    <option value="SC">Santa Catarina</option>
+    <option value="SP">São Paulo</option>
+    <option value="SE">Sergipe</option>
+    <option value="TO">Tocantins</option>
+</select>
+    
+    </div>
+    <div class="form-group col-md-2">
+        <label for="cidaderes" >Cidade reside</label>
+        <select id="cidaderes" required class="form-control print" name="cidaderes" placeholder="" value="">
+        <option  value="{{$events->cidaderes}}"> {{$events->cidaderes}}</option>  
+        <option value=""></option>
+</select>
+    </div>
+       
         </div>
         <div class="form-row 7linha">
         <div class="col-md-4">
         <label for="endereco">Endereço</label>
-        <input type="text" class="form-control print" id="endereco" name="endereco" placeholder="" value="{{$events->endereco}}" >
+        <input type="text" class="form-control print" required id="endereco" name="endereco" placeholder="" value="{{$events->endereco}}" >
         </div>
 
         <div class="form-group col-md-2">
         <label for="numeroendereco">Nº</label>
-        <input type="text" class="form-control print" id="numeroendereco" name="numeroendereco" placeholder="" value="{{$events->numeroendereco}}" >
+        <input type="text" class="form-control print" required id="numeroendereco" name="numeroendereco" placeholder="" value="{{$events->numeroendereco}}" >
         </div>
 
         <div class="form-group col-md-4">
         <label for="complementoendereco">Complemento</label>
-        <input type="text" class="form-control print" id="complementoendereco" name="complementoendereco" placeholder="" value="{{$events->complementoendereco}}" >
+        <input type="text" class="form-control print" required id="complementoendereco" name="complementoendereco" placeholder="" value="{{$events->complementoendereco}}" >
         </div>
 
         <div class="form-group col-md-2">
         <label for="bairro">Bairro</label>
-        <input type="text" class="form-control print" id="bairro" name="bairro" placeholder="" value="{{$events->bairro}}" >
+        <input type="text" class="form-control print" required id="bairro" name="bairro" placeholder="" value="{{$events->bairro}}" >
         </div>
 
         </div>
@@ -226,12 +294,12 @@
         <div class="form-row 8linha">
         <div class="form-group col-md-1">
         <label for="altura">Altura</label>
-        <input type="text" class="form-control print" id="altura" name="altura" placeholder="" value="{{$events->altura}}" >
+        <input type="text" class="form-control print"   requiredid="altura" name="altura" placeholder="" value="{{$events->altura}}" >
         </div>
         
         <div class="form-group col-md-1">
         <label for="cutis">Cutis</label>
-            <select class="form-control print" id="cutis" name="cutis" value="" >
+            <select class="form-control print" required id="cutis" name="cutis" value="" >
             <option  value="{{$events->cutis}}"> {{$events->cutis}}</option>   
             <option value="PRETA">PRETA</option>
               <option value="PARDA">PARDA</option>
@@ -242,7 +310,7 @@
             <div class="form-group col-md-2">
 
         <label for="cordocabelo">Cor do Cabelo</label>
-            <select class="form-control print" id="cordocabelo" name="cordocabelo" value="" >
+            <select class="form-control print" required id="cordocabelo" name="cordocabelo" value="" >
             <option  value="{{$events->cordocabelo}}"> {{$events->cordocabelo}}</option>    
             <option value="CASTANHOS">CASTANHOS</option>
               <option value="LOUROS">LOUROS</option>
@@ -253,7 +321,7 @@
             </div>         
             <div class="form-group col-md-2">
         <label for="barba">Barba</label>
-            <select class="form-control print" id="barba" name="barba" value="" >
+            <select class="form-control print" required id="barba" name="barba" value="" >
             <option  value="{{$events->barba}}"> {{$events->barba}}</option>    
             <option value="IMBERBE">IMBERBE</option>
               <option value="RALA">RALA</option>
@@ -265,7 +333,7 @@
 
             <div class="form-group col-md-2">
         <label for="bigode">Bigode</label>
-            <select class="form-control print" id="bigode" name="bigode" value="" >
+            <select class="form-control print" id="bigode" required name="bigode" value="" >
             <option  value="{{$events->bigode}}"> {{$events->bigode}}</option>    
             <option value="NENHUM">NENHUM</option>
               <option value="FINO">FINO</option>
@@ -278,7 +346,7 @@
 
             <div class="form-group col-md-2">
         <label for="cordolho">Cor do Olho</label>
-            <select class="form-control print" id="cordoolho" name="cordoolho"value="" >
+            <select class="form-control print" required id="cordoolho" name="cordoolho"value="" >
             <option  value="{{$events->corolho}}"> {{$events->corolho}}</option>    
             <option value="CASTANHO">CASTANHO</option>
               <option value="PRETO">PRET</option>
@@ -291,7 +359,7 @@
 
             <div class="form-group col-md-2">
         <label for="tipodoolho">Tipo do Olho</label>
-            <select class="form-control print" id="tipodoolho" name="tipodoolho" value="" >
+            <select class="form-control print" required id="tipodoolho" name="tipodoolho" value="" >
             <option  value="{{$events->tipodolho}}"> {{$events->tipodolho}}</option>   
             <option value="REDONDOS">REDONDOS</option>
               <option value="ORIENTAIS">ORIENTAIS</option>
@@ -324,6 +392,26 @@
  </div>
   
 </form>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+
+$("#telefone").mask("(99) 99999-9999");     // Máscara para TELEFONE
+
+$("#cep").mask("99999-999");    // Máscara para CEP
+
+$("#data").mask("99/99/9999");    // Máscara para DATA
+
+$("#cpf").mask("999.999.999-99");    // Máscara para CNPJ
+
+$('#rg').mask('99.999.999-99');    // Máscara para RG<br/>
+
+$('#agencia').mask('9999-9');    // Máscara para AGÊNCIA BANCÁRIA
+
+$('#conta').mask('99.999-9');    // Máscara para CONTA BANCÁRIA
+
+});
+</script>
 
 
 

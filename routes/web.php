@@ -27,7 +27,11 @@ Route::get('/edit1', function () {
     return view('cadastrorg/edit1');
 });
 
-
+Route::get('/teste', function () {
+    return view('cadastrorg/combo_dinamico');
+});
+Route::get('/pesquisadata', 'App\Http\Controllers\CadastrorgController@pesquisadata')->middleware(['auth', 'verified'])->name('pesquisadata');
+Route::get('/pesquisadata1', 'App\Http\Controllers\CadastrorgController@pesquisadata1')->middleware(['auth', 'verified'])->name('pesquisadata1');
 Route::get('/cadastrorg', 'App\Http\Controllers\CadastrorgController@sande')->middleware(['auth', 'verified'])->name('cadastrorg');
 Route::get('/posts', 'App\Http\Controllers\CadastrorgController@index')->middleware(['auth', 'verified'])->name('post.create');
 Route::post('/posts', 'App\Http\Controllers\CadastrorgController@store')->middleware(['auth', 'verified'])->name('post.store');

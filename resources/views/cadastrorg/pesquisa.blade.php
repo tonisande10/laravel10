@@ -52,7 +52,7 @@
         </div>
     <div class="form-group col-md-4">
         <label for="mae">Nome da mãe</label>
-        <input type="text" class="form-control print" id="mae" placeholder="" value="" >
+        <input type="text" class="form-control print" name="mae" id="mae" placeholder="" value="" >
         </div>
     </div>
 

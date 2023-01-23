@@ -95,7 +95,9 @@ class CadastrorgController extends Controller
 
     ]);
 
-    return "Cadastro realizado com sucesso";
+    
+    return view ('cadastrorg/inicialrg');
+    
 /* dd($request->all()); */
 
         
@@ -112,10 +114,24 @@ class CadastrorgController extends Controller
 public function push(Request $request)
 {
     $datah=date('d/m/Y');
+       $search = $request->input('nomereq');
+    $search1 = $request->input('mae');
+
     
-$search=request('nomereq');
 if ($search){
-$events = ModelCadastrorg::where([['nomereq','like','%'.$search.'%']])->limit(10)->orderBy('id', 'DESC')->get();
+ 
+$events =  ModelCadastrorg::where('nomereq','like', '%'.$request->input('nomereq').'%')
+->where('mae','like', '%'.$request->input('mae').'%')
+->limit(10)
+->orderBy('id', 'DESC')
+->get(); 
+
+
+/* ModelCadastrorg::whereColumn([
+    ['nomereq', 'like', $search ],
+    ['mae', 'like', $search1],
+])->get(); */
+
 
 }
 else{
@@ -214,5 +230,32 @@ public function update2(Request $request, $id)
     ]);
 return "produto cadastrado com sucesso";
 }
+
+public function pesquisadata1(Request $request)
+{
+    $query = ModelCadastrorg::query();
+
+
+
+    $data_inicio = \DateTime::createFromFormat('d/m/Y', $request->get('data_inicio'));
+    $data_fim    = \DateTime::createFromFormat('d/m/Y', $request->get('data_fim'));
+
+     if ($data_inicio && $data_fim) {
+         $query->whereDate('datai', '>=', $data_inicio);
+         $query->whereDate('datai', '<=', $data_fim);
+     }
+
+     $produtos = $query->paginate();
+
+     return view('cadastrorg/teste2', compact('produtos'));
+
+}
+public function pesquisadata()
+{
+    return view('cadastrorg/teste1');
+
+}
+
+
 
 }
